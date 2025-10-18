@@ -25,9 +25,17 @@ set(GTEST_LIB_FILES libgtest.a
 # Nlohmann
 include_directories(${CMAKE_SOURCE_DIR}/third_party/nlohmann/include)
 
+# Lumos
+link_directories(${CMAKE_SOURCE_DIR}/third_party/lumos/src)
+
+link_directories(${CMAKE_SOURCE_DIR}/src/)
+
 add_compile_options(-Wall -Wextra -pedantic)
 
 # Enable testing
 enable_testing()
 
+# Add subdirectories
+add_subdirectory(src/modules/simulator)
+add_subdirectory(src/modules/control)
 add_subdirectory(src/applications/simple)
