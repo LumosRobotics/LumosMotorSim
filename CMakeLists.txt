@@ -38,4 +38,6 @@ enable_testing()
 # Add subdirectories
 add_subdirectory(src/modules/simulator)
 add_subdirectory(src/modules/control)
+add_subdirectory(src/modules/motor_control)
+add_subdirectory(src/integration_tests)
 add_subdirectory(src/applications/simple)
